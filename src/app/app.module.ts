@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
-import {Error404Component} from "./error-404/error-404.component";
 import {HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "./core/component/core.module";
 import {CourseModule} from "./courses/course.module";
@@ -12,7 +11,6 @@ import {CourseModule} from "./courses/course.module";
 @NgModule({
   declarations: [
     AppComponent,
-    Error404Component
   ],
   imports: [
     BrowserModule,
@@ -22,9 +20,6 @@ import {CourseModule} from "./courses/course.module";
     RouterModule.forRoot([
       {
         path: '', redirectTo: 'courses', pathMatch: 'full'
-      },
-      {
-        path: '**', component: Error404Component
       }
     ])
   ],
